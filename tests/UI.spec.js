@@ -1,3 +1,6 @@
+//Execution Script 
+
+
 const {test, expect} = require('@playwright/test');
 const {LoginPage} = require('../PageObject/LoginPage');
 const {addEmployee, AddEmployee} = require('../PageObject/AddEmployee');
@@ -19,9 +22,9 @@ loginPage.goto();
 loginPage.validLogin(dataset.username,dataset.password);
 loginPage.Click_EmpLink ();
 loginPage.AddEmployee();
-addEmployee.EmployeeDetails((Empdataset.FirstName,Empdataset.LastName,Empdataset.EmailAddress,Empdataset.PhoneNumber,Empdataset.Month,Empdataset.JobDetails));
+addEmployee.EmployeeDetails((Empdataset.FirstName,Empdataset.LastName,Empdataset.EmailAddress,Empdataset.PhoneNumber,Empdataset.MonthValue,Empdataset.YearValue,Empdataset.date,Empdataset.JobDetails));
 addEmployee.AddAnotherEmployee();
-addEmployee.EmployeeDetails((Empdataset.FirstName,Empdataset.LastName,Empdataset.EmailAddress,Empdataset.PhoneNumber,Empdataset.Month,Empdataset.JobDetails));
+addEmployee.EmployeeDetails((Empdataset.FirstName,Empdataset.LastName,Empdataset.EmailAddress,Empdataset.PhoneNumber,Empdataset.MonthValue,Empdataset.YearValue,Empdataset.date,Empdataset.JobDetails));
 addEmployee.validateEmployees((Empdataset.FirstName,Empdataset.LastName,Empdataset.JobDetails));
 
 
@@ -32,6 +35,6 @@ addEmployee.validateEmployees((Empdataset.FirstName,Empdataset.LastName,Empdatas
 
 
 
-await page.pause();
+
 
 });

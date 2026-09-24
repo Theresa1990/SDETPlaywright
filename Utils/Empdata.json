@@ -4,7 +4,9 @@
     "LastName"     : "TestD",
     "EmailAddress" :"abc@gmail.com",
     "PhoneNumber"  :"7758962148",
-    "Date"        :"12/06/2025",
+    "MonthValue"   :"June",
+    "YearValue"    :"2025",
+    "Date"         :"5",
     "JobDetails"   :"QA"
 
     },
@@ -13,7 +15,9 @@
     "LastName"     : "abc",
     "EmailAddress" :"abc@gmail.com",
     "PhoneNumber"  :"7758962148",
-    "Date"        :"12/06/2025",
+    "MonthValue"   :"July",
+    "YearValue"    :"2025",
+    "Date"         :"5",
     "JobDetails"   :"QATest"
 
 
