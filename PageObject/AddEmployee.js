@@ -11,6 +11,7 @@ class AddEmployee{
         this.Month = page.getByRole('textbox', { name: 'Start date (optional)' });
         this.Jobtitle=this.page.getByRole('textbox', { name: 'Job title' });
         this.SaveEmployee=this.page.getByRole('button', { name: 'Save new employee' });
+        this.AddAnotherEmp=this.page.getByRole('button',{name: 'Add another employee'});
 
 
 
@@ -21,17 +22,15 @@ class AddEmployee{
 
     }
 
-    async EmployeeDetails(FirstName,LastName,EmailAddress,PhoneNumber,Month){
+    async EmployeeDetails(FirstName,LastName,EmailAddress,PhoneNumber,Date,Jobtitle){
 
         
         await this.FirstName.fill(FirstName);
         await this.LastName.fill(LastName);
         await this.EmailAddress.fill(EmailAddress);
         await this.PhoneNumber.fill(PhoneNumber);
-        await this.SelectDate.click();
-        await this.Month.click();
-        await this.SelectMonth.fill(Month);
-        await this.Jobtitle.click();
+        await this.SelectDate.fill(Date);
+        await this.Jobtitle.fill(Jobtitle);
         await this.SaveEmployee.click();
 
         
@@ -67,15 +66,9 @@ class AddEmployee{
                 Result_Title.trim() === target_job.trim()
             ) {
 
-                console.log(
-                    'Expected Name =', target_name,
-                    'Actual Name =', Result_Name
-                );
+                console.log('Expected Name =', target_name,'Actual Name =', Result_Name );
 
-                console.log(
-                    'Expected Job =', target_job,
-                    'Actual Job =', Result_Title
-                );
+                console.log('Expected Job =', target_job,'Actual Job =', Result_Title);
 
                 console.log('Employee Found');
 
@@ -89,6 +82,10 @@ class AddEmployee{
             console.log(`Employee NOT Found: ${target_name} - ${target_job}`);
         }
     }
+}
+async AddAnotherEmployee(){
+    await this.AddAnotherEmp.click();
+    
 }
 
 

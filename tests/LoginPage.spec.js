@@ -20,10 +20,9 @@ loginPage.validLogin(dataset.username,dataset.password);
 loginPage.Click_EmpLink ();
 loginPage.AddEmployee();
 addEmployee.EmployeeDetails((Empdataset.FirstName,Empdataset.LastName,Empdataset.EmailAddress,Empdataset.PhoneNumber,Empdataset.Month,Empdataset.JobDetails));
-addEmployee.validateEmployee((Empdataset.FirstName,Empdataset.LastName,Empdataset.JobDetails));
-
-
-
+addEmployee.AddAnotherEmployee();
+addEmployee.EmployeeDetails((Empdataset.FirstName,Empdataset.LastName,Empdataset.EmailAddress,Empdataset.PhoneNumber,Empdataset.Month,Empdataset.JobDetails));
+addEmployee.validateEmployees((Empdataset.FirstName,Empdataset.LastName,Empdataset.JobDetails));
 
 
 
